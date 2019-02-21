@@ -18,14 +18,15 @@ export default ({ data }) => {
           Amazing Pandas Eating Things
         </h1> */}
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges.map(({ node }, index) => (
           <div key={node.id}>
             <h3
               css={css`
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              {node.frontmatter.title}{" "}
+              {" "}
+              {index + 1} . {node.frontmatter.title}{" "}
               {/* <span
                 css={css`
                   color: #bbb;
@@ -51,7 +52,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
           }
           excerpt
         }
