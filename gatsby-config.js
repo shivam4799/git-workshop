@@ -7,10 +7,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
+        path: `${__dirname}/blog`
       }
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typography`,
