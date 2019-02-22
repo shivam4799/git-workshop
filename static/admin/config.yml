@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: shivam4799/git-workshop
 
 media_folder: static/assets
 public_folder: assets
